@@ -5,8 +5,11 @@ public class Converter {
         String[] numbers = {
                 "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"
         };
-        if (number >= 10){
-            return "X" + toRoman(number-10);
+        if (number >= 50) {
+            return "L" + toRoman(number - 50);
+        }
+        if (number >= 10) {
+            return "X" + toRoman(number - 10);
         }
         return numbers[number];
     }

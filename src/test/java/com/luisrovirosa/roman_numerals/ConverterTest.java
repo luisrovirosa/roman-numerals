@@ -32,5 +32,7 @@ public class ConverterTest {
         assertThat(converter.toRoman(13), is("XIII"));
         assertThat(converter.toRoman(14), is("XIV"));
         assertThat(converter.toRoman(15), is("XV"));
+        assertThat(converter.toRoman(20), is("XX"));
+        assertThat(converter.toRoman(50), is("L"));
     }
 }
