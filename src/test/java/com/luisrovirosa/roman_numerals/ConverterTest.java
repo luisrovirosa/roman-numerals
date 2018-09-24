@@ -34,4 +34,9 @@ public class ConverterTest {
     public void converts_four_into_iv(){
         assertThat(converter.toRoman(4), is("IV"));
     }
+
+    @Test
+    public void converts_five_into_v(){
+        assertThat(converter.toRoman(5), is("V"));
+    }
 }
