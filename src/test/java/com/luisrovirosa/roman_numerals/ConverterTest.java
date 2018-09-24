@@ -12,4 +12,10 @@ public class ConverterTest {
 
         assertThat(converter.toRoman(1), is("I"));
     }
+    @Test
+    public void converts_two_into_ii(){
+        Converter converter = new Converter();
+
+        assertThat(converter.toRoman(2), is("II"));
+    }
 }
