@@ -8,6 +8,9 @@ public class Converter {
         if (number >= 50) {
             return "L" + toRoman(number - 50);
         }
+        if (number >= 40) {
+            return "XL" + toRoman(number - 40);
+        }
         if (number >= 10) {
             return "X" + toRoman(number - 10);
         }
