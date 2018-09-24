@@ -1,6 +1,7 @@
 package com.luisrovirosa.roman_numerals;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Converter {
@@ -9,10 +10,11 @@ public class Converter {
                 "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"
         };
 
-        HashMap<Integer, String> letters = new HashMap<Integer, String>(){{
+        HashMap<Integer, String> letters = new LinkedHashMap<Integer, String>(){{
             put(50, "L");
             put(40, "XL");
             put(10, "X");
+            put(9, "IX");
         }};
 
         for (Map.Entry<Integer, String> conversion: letters.entrySet()) {
