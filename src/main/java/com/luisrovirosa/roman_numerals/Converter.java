@@ -7,6 +7,7 @@ import java.util.Map;
 public class Converter {
     public String toRoman(int number) {
         HashMap<Integer, String> letters = new LinkedHashMap<Integer, String>() {{
+            put(400, "CD");
             put(100, "C");
             put(90, "XC");
             put(50, "L");
