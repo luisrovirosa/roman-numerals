@@ -41,5 +41,6 @@ public class ConverterTest {
         assertThat(converter.toRoman(500), is("D"));
         assertThat(converter.toRoman(900), is("CM"));
         assertThat(converter.toRoman(1000), is("M"));
+        assertThat(converter.toRoman(3999), is("MMMCMXCIX"));
     }
 }
