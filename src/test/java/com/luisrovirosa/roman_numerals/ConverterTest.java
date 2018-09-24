@@ -16,27 +16,11 @@ public class ConverterTest {
     }
 
     @Test
-    public void converts_one_into_i(){
+    public void converts_the_numbers(){
         assertThat(converter.toRoman(1), is("I"));
-    }
-
-    @Test
-    public void converts_two_into_ii(){
         assertThat(converter.toRoman(2), is("II"));
-    }
-
-    @Test
-    public void converts_three_into_iii(){
         assertThat(converter.toRoman(3), is("III"));
-    }
-
-    @Test
-    public void converts_four_into_iv(){
         assertThat(converter.toRoman(4), is("IV"));
-    }
-
-    @Test
-    public void converts_five_into_v(){
         assertThat(converter.toRoman(5), is("V"));
     }
 }
