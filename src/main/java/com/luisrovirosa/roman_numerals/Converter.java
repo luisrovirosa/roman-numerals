@@ -2,16 +2,16 @@ package com.luisrovirosa.roman_numerals;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Optional;
 
 public class Converter {
     public String toRoman(int number) {
-        Optional<Map.Entry<Integer, String>> conversion = conversions().entrySet().stream().filter(c -> number >= c.getKey()).findFirst();
-        if (!conversion.isPresent()) {
-            return "";
-        }
-        return conversion.get().getValue() + toRoman(number - conversion.get().getKey());
+        return conversions()
+                .entrySet()
+                .stream()
+                .filter(c -> number >= c.getKey())
+                .findFirst()
+                .map(integerStringEntry -> integerStringEntry.getValue() + toRoman(number - integerStringEntry.getKey()))
+                .orElse("");
     }
 
     private HashMap<Integer, String> conversions() {
